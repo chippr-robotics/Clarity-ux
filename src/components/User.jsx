@@ -3,6 +3,7 @@ import { useState } from "preact/hooks";
 import { Entity} from "aframe-react"; 
 
 import  Crown  from "./UI/CrownUI";
+import LoginModal from "./UI/LoginModal";
 
 export default function User({ neurosity }) {              
        
@@ -17,6 +18,7 @@ export default function User({ neurosity }) {
               <Entity class="overlay">
                      <Crown  neurosity={neurosity}  />
               </Entity>
+              <LoginModal />
               </Entity> 
        ); 
 }
