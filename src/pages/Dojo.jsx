@@ -83,9 +83,6 @@ export function Dojo({ user, neurosity }) {
             />
             <User neurosity={neurosity} /> 
             </Entity>
-            <Entity>
-              <Login />
-            </Entity>
             </Scene>
     );
   }
