@@ -15,6 +15,7 @@ import "../assets/js/aframe-environment";
 import "../assets/af_components/ar-components";
 import "../assets/af_components/voice-nav";
 import {Lamp} from "../components/props/lamp"
+import { BarGraph } from "../components/UI/metrics/BarGraph";
 
 
 
@@ -53,7 +54,11 @@ export function Dojo({ user, neurosity }) {
     }
     const ballTracker = '0 '+ calm*5 +' -2';
     return (
-        <Scene>
+      <Scene 
+        webxr="requiredFeatures: hit-test,local-floor;
+        optionalFeatures: dom-overlay,unbounded;
+        overlayElement: #overlay;">
+      <Entity>
           <Entity
           primitive="a-sphere"
           position={ballTracker}
@@ -73,11 +78,12 @@ export function Dojo({ user, neurosity }) {
             events={{ 
                 click: handleClick
             }} 
+            visible="false"
             />
-           
+            <BarGraph valueArray={[2,3,4,5,6]} value="test bars" location="0 2 -1" />
             <User neurosity={neurosity} /> 
-       </Scene>
-   
+            </Entity>
+            </Scene>
     );
   }
   /** <main className="main-container">

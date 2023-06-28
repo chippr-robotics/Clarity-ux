@@ -63,7 +63,6 @@ function App() {
    } , [user]);
    
    return (
-    
     <Router>
       <Login
         path="/"
@@ -81,7 +80,7 @@ function App() {
         setDeviceId("");
       }}
       />
- 
+  
       <Dojo 
       path="/dojo" 
       neurosity={neurosity} 
