@@ -63,30 +63,8 @@ function App() {
    } , [user]);
    
    return (
-    <Router>
-      <Login
-        path="/"
-        neurosity={neurosity}
-        user={user}
-        setUser={setUser}
-        setDeviceId={setDeviceId}
-      />
-      <Logout
-      path="/logout"
-      neurosity={neurosity}
-      resetState={() => {
-        setNeurosity(null);
-        setUser(null);
-        setDeviceId("");
-      }}
-      />
-  
-      <Dojo 
-      path="/dojo" 
-      neurosity={neurosity} 
-      user={user} 
-      />
-      </Router> 
+    <Dojo neurosity={neurosity}  user={user} />
+       
     
    );
 };

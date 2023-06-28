@@ -16,6 +16,7 @@ import "../assets/af_components/ar-components";
 import "../assets/af_components/voice-nav";
 import {Lamp} from "../components/props/lamp"
 import { BarGraph } from "../components/UI/metrics/BarGraph";
+import { Login } from "./Login";
 
 
 
@@ -80,8 +81,10 @@ export function Dojo({ user, neurosity }) {
             }} 
             visible="false"
             />
-            <BarGraph valueArray={[2,3,4,5,6]} value="test bars" location="0 2 -1" />
             <User neurosity={neurosity} /> 
+            </Entity>
+            <Entity>
+              <Login />
             </Entity>
             </Scene>
     );
@@ -101,4 +104,6 @@ export function Dojo({ user, neurosity }) {
                 width="100"
                 color="blue"
                 />
+    <BarGraph valueArray={[2,3,4,5,6]} value="test bars" location="0 2 -1" />
+           
       */
