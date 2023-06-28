@@ -1,4 +1,4 @@
-# agi-react-web
+# BCI-WebXR
 WebXR interface for BCI data written with react aframejs and neurosity
 
 ## Concept
